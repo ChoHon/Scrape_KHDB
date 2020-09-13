@@ -3,9 +3,9 @@ import lxml.html
 import csv
 
 def main():
-    last_page = 10 * 100
+    # last_page = 10 * 100
     khdb_01 = []
-    for page in range(1001, 1005):
+    for page in range(1, 1005):
         root_url = 'http://db.history.go.kr/search/searchResultList.do?sort=&dir=&limit=1000&page=' + str(page) + '&pre_page=0&setId=-1&totalCount=0&kristalProtocol=&itemId=jw&synonym=off&chinessChar=on&searchTermImages=1900+~+2000%26nbsp%3B&brokerPagingInfo=&searchKeywordType=periods&searchKeywordMethod=EQ&searchKeyword=1900+~+2000&searchKeywordConjunction=AND'
         resp, root = get_webpage(root_url)
         print("Scraping page(" + str(page) + "/1004)")
